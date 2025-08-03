@@ -5,13 +5,11 @@ from telegram.ext import (
     Application,
     CommandHandler,
     CallbackQueryHandler,
-    ContextTypes,
-    MessageHandler,
-    filters
+    ContextTypes
 )
 
-# Configuration
-TOKEN = os.getenv('2048178042:AAHBeWLbetY60rnaSI0EwIRVpfwC9S7vnhM')
+# Configuration - Get token from environment variable
+TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', '2048178042:AAHBeWLbetY60rnaSI0EwIRVpfwC9S7vnhM')
 API_HEADERS = {
     'accept': '*/*',
     'accept-language': 'en-US,en;q=0.9',
@@ -110,6 +108,7 @@ def main():
     application.add_handler(CallbackQueryHandler(handle_country_selection))
     
     # Start the Bot
+    print("Bot is running...")
     application.run_polling()
 
 if __name__ == "__main__":
