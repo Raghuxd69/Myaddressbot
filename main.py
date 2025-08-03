@@ -11,7 +11,7 @@ from telegram.ext import (
 )
 
 # Configuration
-TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TOKEN = os.getenv('2048178042:AAHBeWLbetY60rnaSI0EwIRVpfwC9S7vnhM')
 API_HEADERS = {
     'accept': '*/*',
     'accept-language': 'en-US,en;q=0.9',
